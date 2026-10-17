@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/recipe-v1.schema.json",
+  "version": 1,
+  "app": {
+    "id": "fatcat",
+    "name": "Fat Cat Pomodoro",
+    "description": "A cosy Pomodoro timer that fills your breaks with collectible animated cats.",
+    "provider": "github",
+    "repo": "sikosis/fatcat",
+    "asset_pattern": "^fatcat-.*-{arch}\\.hpkg$",
+    "package_name": "fatcat",
+    "channel": "stable"
+  }
+}
