@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/recipe-v1.schema.json",
+  "version": 1,
+  "app": {
+    "id": "kairo",
+    "name": "Kairo",
+    "description": "An AI harness application for Haiku.",
+    "provider": "github",
+    "repo": "sikosis/kairo",
+    "asset_pattern": "^kairo-.*-{arch}\\.hpkg$",
+    "package_name": "kairo",
+    "channel": "stable"
+  }
+}
