@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/recipe-v1.schema.json",
+  "version": 1,
+  "app": {
+    "id": "kiru",
+    "name": "Kiru",
+    "description": "An easy-to-use, keyboard-first video chopping tool for Haiku.",
+    "provider": "github",
+    "repo": "sikosis/kiru",
+    "asset_pattern": "^kiru-.*-{arch}\\.hpkg$",
+    "package_name": "kiru",
+    "channel": "stable"
+  }
+}
