@@ -2,12 +2,22 @@ name: Validate cookbook
 
 on:
   pull_request:
+    paths:
+      - "recipes/**"
+      - "schema/**"
+      - "scripts/**"
+      - ".github/workflows/validate.yml"
   push:
     branches:
       - main
+    paths:
+      - "recipes/**"
+      - "schema/**"
+      - "scripts/**"
+      - ".github/workflows/validate.yml"
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   validate:
@@ -23,5 +33,14 @@ jobs:
         run: check-jsonschema --schemafile schema/recipe-v1.schema.json recipes/*.json
       - name: Generate catalogue
         run: bash scripts/build-catalog.sh
-      - name: Check generated catalogue
-        run: git diff --exit-code -- catalog.json
+      - name: Publish generated catalogue
+        if: github.event_name == 'push'
+        run: |
+          if git diff --quiet -- catalog.json; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add catalog.json
+          git commit -m "Regenerate catalogue"
+          git push
