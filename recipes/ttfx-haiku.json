@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/recipe-v1.schema.json",
+  "version": 1,
+  "app": {
+    "id": "ttfx-haiku",
+    "name": "ttfx-haiku",
+    "description": "A dependency-free C++17 terminal animation engine for Haiku.",
+    "provider": "github",
+    "repo": "sikosis/ttfx-haiku",
+    "asset_pattern": "^ttfx-.*-{arch}\\.hpkg$",
+    "package_name": "ttfx",
+    "channel": "stable"
+  }
+}
