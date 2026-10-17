@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/recipe-v1.schema.json",
+  "version": 1,
+  "app": {
+    "id": "vhs",
+    "name": "VHS",
+    "description": "Turns tape scripts into terminal recordings in GIF, MP4, WebM, PNG or text formats on Haiku.",
+    "provider": "github",
+    "repo": "sikosis/vhs",
+    "asset_pattern": "^vhs-.*-{arch}\\.hpkg$",
+    "package_name": "vhs",
+    "channel": "stable"
+  }
+}
