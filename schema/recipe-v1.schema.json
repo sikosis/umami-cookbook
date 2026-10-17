@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/sikosis/umami-cookbook/main/schema/recipe-v1.schema.json",
+  "title": "umami recipe v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "app"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "version": {
+      "const": 1
+    },
+    "app": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "description",
+        "provider",
+        "repo",
+        "asset_pattern",
+        "package_name",
+        "channel"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9._-]*$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "provider": {
+          "const": "github"
+        },
+        "repo": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
+        },
+        "asset_pattern": {
+          "type": "string",
+          "pattern": "\\{arch\\}"
+        },
+        "package_name": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9+_.-]*$"
+        },
+        "channel": {
+          "enum": [
+            "stable",
+            "prerelease"
+          ]
+        },
+        "checksum_asset": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}
