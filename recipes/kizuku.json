@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/recipe-v1.schema.json",
+  "version": 1,
+  "app": {
+    "id": "kizuku",
+    "name": "Kizuku",
+    "description": "A tool for creating interactive Bash experiences powered by hum.",
+    "provider": "github",
+    "repo": "sikosis/kizuku",
+    "asset_pattern": "^kizuku-.*-{arch}\\.hpkg$",
+    "package_name": "kizuku",
+    "channel": "stable"
+  }
+}
