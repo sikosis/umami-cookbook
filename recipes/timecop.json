@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/recipe-v1.schema.json",
+  "version": 1,
+  "app": {
+    "id": "timecop",
+    "name": "TimeCop",
+    "description": "A utility for viewing BeOS and Haiku uptime statistics.",
+    "provider": "github",
+    "repo": "sikosis/TimeCop",
+    "asset_pattern": "^timecop-.*-{arch}\\.hpkg$",
+    "package_name": "timecop",
+    "channel": "stable"
+  }
+}
