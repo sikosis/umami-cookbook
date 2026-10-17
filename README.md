@@ -9,10 +9,14 @@ Each file in `recipes/` describes one application and the GitHub release package
 - **Add:** create `recipes/<id>.json` using an existing recipe as a guide.
 - **Edit:** update the matching recipe.
 - **Remove:** delete the recipe. Removing a recipe does not uninstall packages already installed by users.
-- Run `bash scripts/build-catalog.sh`.
-- Commit the recipe change together with the regenerated `catalog.json`.
 
-Pull requests validate every recipe against `schema/recipe-v1.schema.json`, reject duplicate or mismatched IDs, regenerate the catalogue, and fail if the generated file was not committed.
+Only edit files under `recipes/`; do not edit `catalog.json` by hand. Pull requests validate every recipe against `schema/recipe-v1.schema.json` and reject duplicate or mismatched IDs. After a recipe change reaches `main`, GitHub Actions regenerates `catalog.json` and commits it automatically.
+
+To generate the catalogue locally for inspection, run:
+
+```sh
+bash scripts/build-catalog.sh
+```
 
 ## Catalogue URL
 
