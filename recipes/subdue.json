@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/recipe-v1.schema.json",
+  "version": 1,
+  "app": {
+    "id": "subdue",
+    "name": "Subdue",
+    "description": "Schedule-based application termination and audio muting for Haiku and other platforms.",
+    "provider": "github",
+    "repo": "sikosis/Subdue",
+    "asset_pattern": "^subdue-.*-{arch}\\.hpkg$",
+    "package_name": "subdue",
+    "channel": "stable"
+  }
+}
