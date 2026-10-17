@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/recipe-v1.schema.json",
+  "version": 1,
+  "app": {
+    "id": "hum",
+    "name": "hum",
+    "description": "Friendly terminal tools for styling text, prompts, pickers, tables and progress indicators on Haiku.",
+    "provider": "github",
+    "repo": "sikosis/hum",
+    "asset_pattern": "^hum-.*-{arch}\\.hpkg$",
+    "package_name": "hum",
+    "channel": "stable"
+  }
+}
