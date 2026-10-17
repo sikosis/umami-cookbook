@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/recipe-v1.schema.json",
+  "version": 1,
+  "app": {
+    "id": "calendar",
+    "name": "Calendar",
+    "description": "A native calendar application for Haiku.",
+    "provider": "github",
+    "repo": "sikosis/Calendar",
+    "asset_pattern": "^calendar-.*-{arch}\\.hpkg$",
+    "package_name": "calendar",
+    "channel": "stable"
+  }
+}
