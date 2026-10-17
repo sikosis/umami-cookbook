@@ -1,0 +1,14 @@
+{
+  "$schema": "../schema/recipe-v1.schema.json",
+  "version": 1,
+  "app": {
+    "id": "ichi",
+    "name": "Ichi",
+    "description": "A terminal-based one-card game.",
+    "provider": "github",
+    "repo": "sikosis/ichi",
+    "asset_pattern": "^ichi-.*-{arch}\\.hpkg$",
+    "package_name": "ichi",
+    "channel": "stable"
+  }
+}
