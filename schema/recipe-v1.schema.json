@@ -48,6 +48,10 @@
           "type": "string",
           "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
         },
+        "release_tag_pattern": {
+          "type": "string",
+          "minLength": 1
+        },
         "asset_pattern": {
           "type": "string",
           "pattern": "\\{arch\\}"
