@@ -22,6 +22,17 @@
       "channel": "stable"
     },
     {
+      "id": "getback",
+      "name": "GetBack",
+      "description": "GetBack for Haiku.",
+      "provider": "github",
+      "repo": "sikosis/umami-pantry",
+      "release_tag_pattern": "^v[0-9].*-getback$",
+      "asset_pattern": "^getback-.*-{arch}\\.hpkg$",
+      "package_name": "getback",
+      "channel": "stable"
+    },
+    {
       "id": "hum",
       "name": "hum",
       "description": "Friendly terminal tools for styling text, prompts, pickers, tables and progress indicators on Haiku.",
