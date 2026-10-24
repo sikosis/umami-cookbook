@@ -26,4 +26,16 @@ https://raw.githubusercontent.com/sikosis/umami-cookbook/main/catalog.json
 
 A recipe may be listed before its first package is published. It becomes installable when a stable GitHub release provides an asset matching `asset_pattern` for the machine architecture.
 
+## Pantry packages
+
+The [umami Pantry](https://github.com/sikosis/umami-pantry) holds published `.hpkg` assets for products whose source is not hosted online. Keep binaries in Pantry releases and their recipes here in the Cookbook.
+
+Use namespaced release tags such as `ichi-v1.2`. A Pantry recipe points to `sikosis/umami-pantry` and adds:
+
+```json
+"release_tag_pattern": "^ichi-v"
+```
+
+Umami then selects the newest stable or prerelease tag belonging to that product. Recipes without `release_tag_pattern` keep the normal one-repository-per-product behaviour.
+
 Source-build instructions are deliberately deferred until umami's source-build stage.
